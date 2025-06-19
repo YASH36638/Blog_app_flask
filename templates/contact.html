@@ -1,0 +1,19 @@
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+
+{% extends "layout.html" %}
+{% block body %}
+
+  <div class="container1">
+    <h2>Contact Us</h2>
+    <form class="contact-form" action="/contact" method="POST">
+      <!-- <input type="text" name="name" placeholder="Your Name" required> -->
+      <input type="number" name="number" placeholder="Your Mob no." required>
+      <!-- <input type="email" name="email" placeholder="Your Email" required> -->
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+{% endblock %}

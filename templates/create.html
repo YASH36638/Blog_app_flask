@@ -1,0 +1,28 @@
+{% block extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+
+
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container2">
+        <h1>Create New Blog Post</h1>
+        <form method="POST" action="{{ url_for('create') }}",methods="POST">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" required>
+
+            <label for="slug">Slug</label>
+            <input type="text" name="slug" id="slug" required>
+
+            <!-- <label><input type="radio" name="content_option" value="manual" checked> Manual</label>
+            <label><input type="radio" name="content_option" value="auto"> Auto Generate</label><br> -->
+
+            <label for="content">Content </label>
+            <textarea name="content" id="content" required></textarea>
+
+            <button type="submit">Publish</button>
+        </form>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% block edit %} 
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+{% endblock %}
+
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="edit">
+<h1>Edit Blog Post</h1>
+    <form method="POST" action="/edit/{{post.sno}}">
+        <label for="title">Title</label><br>
+        <input type="text" id="title" name="title" value="{{ post.title }}" required><br>
+
+        <label for="slug">Slug</label><br>
+        <input type="text" id="slug" name="slug" value="{{ post.slug }}" required><br>
+
+        <label for="content">Content</label><br>
+        <textarea id="content" name="content" rows="10" required>{{ post.content }}</textarea><br>
+
+        <button type="submit">Update Post</button>
+        <a href="{{ url_for('post_specific_route', Post_slug=post.slug) }}">Cancel</a>
+        
+    </form>
+</div>
+
+{% endblock %}

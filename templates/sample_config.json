@@ -1,0 +1,8 @@
+{
+  "params": {
+    "database_uri": "mysql+pymysql://root:password@localhost/blogify",
+    "gmail-user": "your-email@example.com",
+    "gmail-pass": "your-password",
+    "app.secret_key": "your-secret-key"
+  }
+}

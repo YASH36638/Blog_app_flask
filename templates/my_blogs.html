@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h2>My Blogs</h2>
+{% for post in posts %}
+  <div class="blog-card">
+    
+  <div class="blog-content">
+    <h3>{{post.title}}</h3>
+    <p>{{post.content[:100]}}</p>
+    <a href="post/{{post.slug}}">Read More</a>
+  </div>
+  <div class="blog-actions">
+    <button class="edit-btn" onclick="if(confirmdedition()) { location.href='/edit/{{post.sno}}'; }">EDIT</button>
+    <button class="delete-btn"  onclick="if(confirmdeletion()) { location.href='/delete/{{post.sno}}'; }">DELETE</button>
+    
+  </div>
+</div>
+{% endfor %}
+
+<script>
+  function confirmdeletion()
+        {
+            return confirm("Are you sure you want to delete the task?");
+        }
+        function confirmdedition()
+        {
+          return confirm("Are you sure you want to edit the task?");
+        }
+</script>   
+{% endblock %}
+      
+   
+
+
+
+

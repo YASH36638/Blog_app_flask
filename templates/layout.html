@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog App - Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  {% block extra_css %}{% endblock %}
+  {% block blog_css %}{% endblock %}
+  {% block extra %}{% endblock %}
+  {% block pextra %}{% endblock %}
+  {% block extra1 %}{% endblock %}
+  {% block edit %} {% endblock %}
+
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">📝 Blogify</div>
+      <nav class="nav">
+        <a href="/home">Home</a>
+        <a href="/contact">Contact us</a>
+        <a href="/create">Create</a>
+        <a href="/myblogs">My blogs</a>
+        <a href="/profile">Profile</a>
+        <a href="/logout">Logout</a>
+      </nav>
+    </div>
+  </header>
+  <script>
+  const toggleBtn = document.getElementById('toggle-dark');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+  });
+</script>
+
+
+{% block body %} {% endblock %}
+
+<hr>
+<footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Blogify. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+

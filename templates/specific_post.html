@@ -1,0 +1,28 @@
+{% block pextra %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+{% endblock %}
+
+{% extends "layout.html" %}
+{% block body %}
+
+
+<!-- Hero Section -->
+<header class="post-hero">
+  <h1 class="post-title">{{ post.title }}</h1>
+  <p class="post-meta">
+    Posted by <strong>{{ post.created }}</strong> on {{ post.date }}
+  </p>
+</header>
+
+<!-- Blog Content (separate section) -->
+<section class="post-body">
+  <div class="post-content">
+    {{ post.content }}
+  </div>
+</section>
+
+
+
+  </main>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+# ─── Python Cache ─────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ─── Environment (venv) ───────────────────────
+venv/
+env/
+ENV/
+
+# ─── IDE / Editor Configs ─────────────────────
+.vscode/
+.idea/
+*.swp
+
+# ─── System Files ─────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── Logs ─────────────────────────────────────
+*.log
+
+# ─── SQLite DB File (if ever used) ────────────
+*.db
+
+# ─── Sensitive Config File ────────────────────
+templates/config.json
+
+# ─── Bytecode / Jupyter / Temp ────────────────
+*.ipynb_checkpoints/
+*.bak
+*.tmp
+
+# ─── Misc ─────────────────────────────────────
+*.env
+.env
