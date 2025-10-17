@@ -53,8 +53,8 @@ BLOG_APP/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/blogify.git
-cd blogify
+git clone https://github.com/YASH36638/Blog_app_flask
+cd blog_app
 ```
 
 ### 2️⃣ Create & Activate Virtual Environment
