@@ -4,3 +4,6 @@ gunicorn
 mysql-connector-python
 python-dotenv
 SQLAlchemy
+Flask
+Flask-SQLAlchemy
+gunicorn
